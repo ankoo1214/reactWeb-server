@@ -5,6 +5,8 @@ const connectDB = async () => {
       "mongodb+srv://pataleankush12:dsufegBmtVZ523hB@reactweb-cluster.txdzl.mongodb.net/?retryWrites=true&w=majority&appName=reactWeb-cluster",
       {
         serverSelectionTimeoutMS: 30000,
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
       }
     );
     console.log(`Database is connected`);
