@@ -16,7 +16,13 @@ route.post("/submit", async (req, res) => {
     });
     return res.status(202).json({ Status: "Form submitted Successfully" });
   } catch (error) {
-    return res.status(500).json({ Status: "An error occurred" });
+    return res.status(500).json({
+      Status: "An error occurred",
+      error: {
+        message: error.message,
+        stack: error.stack,
+      },
+    });
   }
-}); 
+});
 module.exports = route;
