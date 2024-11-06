@@ -1,7 +1,14 @@
-const express = require('express')
-const PORT = 3000;  
+const express = require("express");
 const app = express();
-const cors = require('cors')
-app.use(cors())
+const PORT = 5000;
 
-app.listen(port=>`Server starter at port ${PORT}`)
+const connectDB = require('./connection/db')
+const formRouter = require('./routes/formRoute/formRoute')
+const cors = require("cors");
+app.use(cors());
+app.use(express.urlencoded({extended:false}))
+app.use(express.json())
+connectDB();
+app.use('/form', formRouter)
+app.listen(PORT, () => console.log(`Server starter at port ${PORT}`));
+  
