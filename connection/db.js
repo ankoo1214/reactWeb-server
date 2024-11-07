@@ -64,5 +64,6 @@ app.use(express.json());
     process.exit(1); // Exit process if the connection fails
   }
 })();
+module.exports = connectDB;
 
 
