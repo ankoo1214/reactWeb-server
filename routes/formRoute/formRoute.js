@@ -2,6 +2,8 @@ const express = require("express");
 const Form = require("../../models/formModel/formModel");
 const route = express.Router();
 
+
+
 // GET endpoint to retrieve all forms
 route.get('/', async (req, res) => {
   try {
@@ -11,10 +13,18 @@ route.get('/', async (req, res) => {
     // Send the data back as a response
     res.json(forms);
   } catch (error) {
+    // Log error details to the server console for debugging
     console.error("Error retrieving forms:", error);
-    res.status(500).json({ message: "Server error, unable to retrieve forms" });
+    
+    // Send error response in JSON format with additional error details
+    res.status(500).json({
+      message: "Server error, unable to retrieve forms",
+      error: error.message,        // Include the error message
+      stack: error.stack           // Optionally, include the stack trace for debugging (useful in development)
+    });
   }
 });
+
 
 
 
