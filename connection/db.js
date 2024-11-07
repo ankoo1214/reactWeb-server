@@ -11,7 +11,7 @@
 //     console.log(`Database is connected`);
 //   } catch (error) {
 //     console.log(`Database is not connected`);
-//   }
+//   } 
 // };
 // module.exports = connectDB;
 const mongoose = require("mongoose");
@@ -25,7 +25,7 @@ const connectDB = async () => {
         useUnifiedTopology: true, // Enables the unified topology layer
         serverSelectionTimeoutMS: 30000, // 30 seconds timeout
         socketTimeoutMS: 45000,
-        bufferCommands:false
+      
       }
     );
     console.log(`Database is connected`);
@@ -35,4 +35,6 @@ const connectDB = async () => {
 };
 
 module.exports = connectDB;
+
+
 
