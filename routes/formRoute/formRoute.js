@@ -16,7 +16,7 @@ route.get('/', async (req, res) => {
   }
 });
 
-module.exports = router;
+
 
 route.post("/submit", async (req, res) => {
   const { name, email, message, contact } = req.body;
