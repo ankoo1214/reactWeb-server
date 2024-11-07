@@ -25,7 +25,7 @@ const connectDB = async () => {
         useUnifiedTopology: true, // Enables the unified topology layer
         serverSelectionTimeoutMS: 30000, // 30 seconds timeout
         socketTimeoutMS: 45000,
-        bufferCommands:false
+      
       }
     );
     console.log(`Database is connected`);
