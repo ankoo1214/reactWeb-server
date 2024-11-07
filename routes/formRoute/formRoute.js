@@ -3,7 +3,7 @@ const Form = require("../../models/formModel/formModel");
 const route = express.Router();
 
 // GET endpoint to retrieve all forms
-router.get('/', async (req, res) => {
+route.get('/', async (req, res) => {
   try {
     // Fetch all form data from the database
     const forms = await Form.find();  // Mongoose query to fetch all forms
