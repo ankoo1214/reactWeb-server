@@ -11,7 +11,7 @@
 //     console.log(`Database is connected`);
 //   } catch (error) {
 //     console.log(`Database is not connected`);
-//   }
+//   } 
 // };
 // module.exports = connectDB;
 const mongoose = require("mongoose");
