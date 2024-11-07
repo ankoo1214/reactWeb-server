@@ -24,6 +24,7 @@ const connectDB = async () => {
         useNewUrlParser: true, // Ensures compatibility with the latest MongoDB connection string parser
         useUnifiedTopology: true, // Enables the unified topology layer
         serverSelectionTimeoutMS: 30000, // 30 seconds timeout
+        socketTimeoutMS: 45000,
       }
     );
     console.log(`Database is connected`);
